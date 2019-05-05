@@ -1,0 +1,14 @@
+<div>
+    <h2>{{title}}</h2>
+
+    <ul class="temp">
+        <li *ngFor="let temperature of temp"
+            [class.selected]="temp === selectedTemp"
+            (click)="onSelect(temperature)">
+            <span class="badge">{{temperature.id}}</span>
+            {{temperature.sensor}} /
+            {{temperature.location}} /
+            {{temperature.temp}} °C
+        </li>
+    </ul>
+</div>
